@@ -27,5 +27,9 @@ class Web{
     public function hotel_book(){
         require __DIR__ . "/../../public_html/views/hotel-booking.php";
     }
+
+    public function book(){
+        require __DIR__ . "/../../public_html/views/payment";
+    }
    
 }   

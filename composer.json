@@ -1,0 +1,21 @@
+{
+    "name": "technolix/flightmvs",
+    "description": "a simple flight booking system with amadeus sdk",
+    "type": "project",
+    "require": {
+        "amadeus4dev/amadeus-php": "^0.3.0",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Technolix\\Flightmvs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emmanuel Onyo",
+            "email": "emmanuelonyo34@gmail.ccom"
+        }
+    ]
+}

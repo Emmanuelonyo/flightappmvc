@@ -13,10 +13,6 @@ class ComposerStaticInitb0108e3943949f41712c96b403d60d79
     );
 
     public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'Technolix\\Flightmvs\\' => 20,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -37,6 +33,7 @@ class ComposerStaticInitb0108e3943949f41712c96b403d60d79
         ),
         'A' => 
         array (
+            'App\\' => 4,
             'Amadeus\\Travel\\Predictions\\' => 27,
             'Amadeus\\Travel\\' => 15,
             'Amadeus\\Shopping\\FlightOffers\\' => 30,
@@ -61,10 +58,6 @@ class ComposerStaticInitb0108e3943949f41712c96b403d60d79
     );
 
     public static $prefixDirsPsr4 = array (
-        'Technolix\\Flightmvs\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -88,6 +81,10 @@ class ComposerStaticInitb0108e3943949f41712c96b403d60d79
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Amadeus\\Travel\\Predictions\\' => 
         array (

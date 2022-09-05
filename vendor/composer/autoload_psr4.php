@@ -6,13 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Technolix\\Flightmvs\\' => array($baseDir . '/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
+    'App\\' => array($baseDir . '/src'),
     'Amadeus\\Travel\\Predictions\\' => array($vendorDir . '/amadeus4dev/amadeus-php/src/travel/predictions'),
     'Amadeus\\Travel\\' => array($vendorDir . '/amadeus4dev/amadeus-php/src/travel'),
     'Amadeus\\Shopping\\FlightOffers\\' => array($vendorDir . '/amadeus4dev/amadeus-php/src/shopping/flightOffers'),

@@ -1,9 +1,7 @@
 <?php 
 include __DIR__ . '/main/header.php';
 ?>
-      <!-- Content
-    ============================================= -->
-    <div id="content">
+ <div id="content">
       <div class="hero-wrap py-2 py-md-3 py-lg-5">
         <div class="hero-mask opacity-3 bg-dark"></div>
         <div class="hero-bg" style="background-image:url('<?=ASSETS?>/images/bg/image-2.jpg');"></div>
@@ -95,35 +93,41 @@ include __DIR__ . '/main/header.php';
                         </div>
                       </form>
                     </div>
+
+                    
                     <!-- Search Flight -->
                     <div class="tab-pane fade" id="flights" role="tabpanel" aria-labelledby="flights-tab">
                       <h2 class="text-4 mb-3">Book Domestic and International Flights</h2>
-                      <form id="bookingFlight" method="GET">
+                      <form id="bookingFlight" method="POST" autocomplete="off" action='flight-details.php'>
                         <div class="mb-3">
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input id="oneway" name="flight-trip" class="custom-control-input" checked="" required type="radio">
+                            <input id="oneway" name="flight-trip" class="custom-control-input" value="one-way" checked="" required type="radio">
                             <label class="custom-control-label" for="oneway">One Way</label>
                           </div>
                           <div class="custom-control custom-radio custom-control-inline">
-                            <input id="roundtrip" name="flight-trip" class="custom-control-input" required type="radio">
+                            <input id="roundtrip" name="flight-trip" value="round-trip" class="custom-control-input" required type="radio">
                             <label class="custom-control-label" for="roundtrip">Round Trip</label>
                           </div>
                         </div>
                         <div class="form-row">
                           <div class="col-md-6 col-lg-2 form-group">
-                            <input type="text" class="form-control" id="flightFrom" required placeholder="From">
-                            <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
+                            <input type="text" list="flightFromOption" class="form-control" name="flightFrom" id="flightFrom" required placeholder="From">
+                            <datalist id="flightFromOption"></datalist>
+                            <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> 
+                          
+                          </div>
                             <div class="col-md-6 col-lg-2 form-group">
-                              <input type="text" class="form-control" id="flightTo" required placeholder="To">
+                              <input type="text" class="form-control" list="flightToOption" name="flightTo" id="flightTo" required placeholder="To">
+                              <datalist id="flightToOption"></datalist>
                               <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
                               <div class="col-md-6 col-lg-2 form-group">
-                                <input id="flightDepart" type="text" class="form-control" required placeholder="Depart Date">
+                                <input id="flightDepart" name="flightDepart" type="text" class="form-control" required placeholder="Depart Date">
                                 <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
                                 <div class="col-md-6 col-lg-2 form-group">
-                                  <input id="flightReturn" type="text" class="form-control" required placeholder="Return Date">
+                                  <input id="flightReturn" name="flightReturn" type="text" class="form-control" required placeholder="Return Date">
                                   <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
                                   <div class="col-md-6 col-lg-2 travellers-class form-group">
-                                    <input type="text" id="flightTravellersClass" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" readonly required onkeypress="return false;">
+                                    <input type="text" id="flightTravellersClass" name="flightTravellersClass" class="travellers-class-input form-control" placeholder="Travellers, Class" readonly required onkeypress="return false;">
                                     <span class="icon-inside"><i class="fas fa-caret-down"></i></span> 
                                     <!-- Travellers & Class Dropdown -->
                                     <div class="travellers-dropdown">
@@ -136,7 +140,7 @@ include __DIR__ . '/main/header.php';
                                             <div class="input-group-prepend">
                                               <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner">-</button>
                                             </div>
-                                            <input type="text" data-ride="spinner" id="flightAdult-travellers" class="qty-spinner form-control" value="1" readonly>
+                                            <input type="text" data-ride="spinner" name="flightAdult-travellers" id="flightAdult-travellers" class="qty-spinner form-control" value="1" readonly>
                                             <div class="input-group-append">
                                               <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner">+</button>
                                             </div>
@@ -153,7 +157,7 @@ include __DIR__ . '/main/header.php';
                                             <div class="input-group-prepend">
                                               <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner">-</button>
                                             </div>
-                                            <input type="text" data-ride="spinner" id="flightChildren-travellers" class="qty-spinner form-control" value="0" readonly>
+                                            <input type="text" data-ride="spinner" id="flightChildren-travellers" name="flightChildren-travellers" class="qty-spinner form-control" value="0" readonly>
                                             <div class="input-group-append">
                                               <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner">+</button>
                                             </div>
@@ -170,7 +174,7 @@ include __DIR__ . '/main/header.php';
                                             <div class="input-group-prepend">
                                               <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner">-</button>
                                             </div>
-                                            <input type="text" data-ride="spinner" id="flightInfants-travellers" class="qty-spinner form-control" value="0" readonly>
+                                            <input type="text" data-ride="spinner" id="flightInfants-travellers" name="flightInfants-travellers" class="qty-spinner form-control" value="0" readonly>
                                             <div class="input-group-append">
                                               <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner">+</button>
                                             </div>
@@ -838,12 +842,12 @@ include __DIR__ . '/main/header.php';
       <section class="section shadow-md bg-light pb-4">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 text-center"> <img class="img-fluid" alt="" src="..<?=ASSETS?>/images/mockup.png"> </div>
+            <div class="col-lg-6 text-center"> <img class="img-fluid" alt="" src="<?=ASSETS?>/images/mockup.png"> </div>
             <div class="col-lg-6 text-center text-lg-left">
               <h2 class="text-9 font-weight-500 my-4">Download Our Travels<br class="d-none d-lg-inline-block">
               Mobile App Now</h2>
               <p class="lead">Download our app for the fastest, most convenient way to Recharge & Bill Payment, Booking and more....</p>
-              <div class="pt-3"> <a class="mr-4" href=""><img alt="" src="<?=ASSETS?>/images/app-store.png"></a><a href=""><img alt="" src="...<?=ASSETS?>/images/google-play-store.png"></a> </div>
+              <div class="pt-3"> <a class="mr-4" href=""><img alt="" src="<?=ASSETS?>/images/app-store.png"></a><a href=""><img alt="" src="<?=ASSETS?>/images/google-play-store.png"></a> </div>
             </div>
           </div>
         </div>
@@ -851,7 +855,7 @@ include __DIR__ . '/main/header.php';
       
     </div>
     <!-- Content end --> 
-    <script src="flightsearch.js"></script>
+    <script src="<?=JS?>/flightsearch.js"></script>
   <?php 
     include __DIR__. '/main/footer.php';
   ?>

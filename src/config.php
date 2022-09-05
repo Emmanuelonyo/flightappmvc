@@ -9,3 +9,4 @@ $dotenv->load();
 
 
 const ASSETS = "public_html/assets";
+const JS = "public_html/javascript";

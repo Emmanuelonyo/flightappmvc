@@ -5,3 +5,7 @@ require __DIR__ . "/../vendor/autoload.php";
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__. "/../");
 $dotenv->load();
+
+
+
+const ASSETS = "public_html/assets";

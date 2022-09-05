@@ -9,8 +9,23 @@ class Web{
      * 
      */
     public function index(){
-        echo "WELCOME TO THE INDEX";
+        require __DIR__ . "/../../public_html/views/index.php";
+    }
+    
+    public function flights(){
+        require __DIR__ . "/../../public_html/views/flight-details.php";
     }
 
+    public function confirm(){
+        require __DIR__ . "/../../public_html/views/flight-confirm.php";
+    }
+    
+    public function hotels(){
+        require __DIR__ . "/../../public_html/views/hotels-list.php";
+    }
 
-}
+    public function hotel_book(){
+        require __DIR__ . "/../../public_html/views/hotel-booking.php";
+    }
+   
+}   

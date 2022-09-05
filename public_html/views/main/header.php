@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-  <link href="assets/images/faviconnew.png" rel="icon" />
+  <link href="<?=ASSETS?>/images/faviconnew.png" rel="icon" />
   <title>kdtex travels</title>
   <meta name="description" content="Flights,htoels and travel booking agency website">
   <meta name="author" content="kdtex technologies">
@@ -15,12 +15,12 @@
 
 <!-- Stylesheet
   ============================================= -->
-  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-  <link rel="stylesheet" type="text/css" href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" type="text/css" href="assets/vendor/owl.carousel/assets/owl.theme.default.min.css" />
-  <link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" href="<?=ASSETS?>/vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?=ASSETS?>/vendor/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?=ASSETS?>/vendor/owl.carousel/<?=ASSETS?>/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?=ASSETS?>/vendor/owl.carousel/<?=ASSETS?>/owl.theme.default.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?=ASSETS?>/vendor/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="<?=ASSETS?>/css/stylesheet.css" />
 </head>
 <body>
   <!-- Preloader -->
@@ -39,7 +39,7 @@
 
           <!-- Logo
             ============================================= -->
-            <div class="logo"> <a href="index.html" title="kdtex travels"><img src="..assets/images/logonew.png" alt="kdtex travels" width="127" height="29" /></a> </div>
+            <div class="logo"> <a href="index.html" title="kdtex travels"><img src="..<?=ASSETS?>/images/logonew.png" alt="kdtex travels" width="127" height="29" /></a> </div>
             <!-- Logo end --> 
             
           </div>

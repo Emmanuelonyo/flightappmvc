@@ -6,7 +6,7 @@ include 'main/header.php';
     <div id="content">
       <div class="hero-wrap py-2 py-md-3 py-lg-5">
         <div class="hero-mask opacity-3 bg-dark"></div>
-        <div class="hero-bg" style="background-image:url('assets/images/bg/image-2.jpg');"></div>
+        <div class="hero-bg" style="background-image:url('<?=ASSETS?>/images/bg/image-2.jpg');"></div>
         <div class="hero-content py-3 py-lg-5 my-3 my-md-5">
           <div class="container">
             <!-- Tabs --> 
@@ -232,7 +232,7 @@ include 'main/header.php';
                 <p>On Metro Booking</p>
               </div>
               <div class="banner-mask"></div>
-              <img class="img-fluid" src="assets/images/slider/small-banner-13-600x320.jpg" alt="banner"> </a> </div>
+              <img class="img-fluid" src="<?=ASSETS?>/images/slider/small-banner-13-600x320.jpg" alt="banner"> </a> </div>
             </div>
             <div class="col-sm-6 col-lg-3">
               <div class="item"> <a href="#">
@@ -241,7 +241,7 @@ include 'main/header.php';
                   <p>On electricity Bill Payment</p>
                 </div>
                 <div class="banner-mask"></div>
-                <img class="img-fluid" src="assets/images/slider/small-banner-14-600x320.jpg" alt="banner"> </a> </div>
+                <img class="img-fluid" src="<?=ASSETS?>/images/slider/small-banner-14-600x320.jpg" alt="banner"> </a> </div>
               </div>
               <div class="col-sm-6 col-lg-3">
                 <div class="item"> <a href="#">
@@ -250,7 +250,7 @@ include 'main/header.php';
                     <p>On Metro Booking</p>
                   </div>
                   <div class="banner-mask"></div>
-                  <img class="img-fluid" src="assets/images/slider/small-banner-13-600x320.jpg" alt="banner"> </a> </div>
+                  <img class="img-fluid" src="<?=ASSETS?>/images/slider/small-banner-13-600x320.jpg" alt="banner"> </a> </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                   <div class="item"> <a href="#">
@@ -259,7 +259,7 @@ include 'main/header.php';
                       <p>On DTH Recharge</p>
                     </div>
                     <div class="banner-mask"></div>
-                    <img class="img-fluid" src="assets/images/slider/small-banner-15-600x320.jpg" alt="banner"> </a> </div>
+                    <img class="img-fluid" src="<?=ASSETS?>/images/slider/small-banner-15-600x320.jpg" alt="banner"> </a> </div>
                   </div>
                 </div>
               </section>
@@ -838,12 +838,12 @@ include 'main/header.php';
       <section class="section shadow-md bg-light pb-4">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 text-center"> <img class="img-fluid" alt="" src="..assets/images/mockup.png"> </div>
+            <div class="col-lg-6 text-center"> <img class="img-fluid" alt="" src="..<?=ASSETS?>/images/mockup.png"> </div>
             <div class="col-lg-6 text-center text-lg-left">
               <h2 class="text-9 font-weight-500 my-4">Download Our Travels<br class="d-none d-lg-inline-block">
               Mobile App Now</h2>
               <p class="lead">Download our app for the fastest, most convenient way to Recharge & Bill Payment, Booking and more....</p>
-              <div class="pt-3"> <a class="mr-4" href=""><img alt="" src="assets/images/app-store.png"></a><a href=""><img alt="" src="...assets/images/google-play-store.png"></a> </div>
+              <div class="pt-3"> <a class="mr-4" href=""><img alt="" src="<?=ASSETS?>/images/app-store.png"></a><a href=""><img alt="" src="...<?=ASSETS?>/images/google-play-store.png"></a> </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
     ============================================= -->
     <footer id="footer" class="mt-0">
       <section class="hero-wrap bg-secondary shadow-md pt-4 pb-3">
-        <div class="hero-bg" style="background-image:url('assets/images/bg/image-5.jpg');"></div>
+        <div class="hero-bg" style="background-image:url('<?=ASSETS?>/images/bg/image-5.jpg');"></div>
         <div class="hero-content">
           <div class="container">
             <div class="row text-light">
@@ -43,11 +43,11 @@
           <div class="col-md-4 mb-3 mb-md-0">
             <p>Payment</p>
             <ul class="payments-types">
-              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/images/payment/visa.png" alt="visa" title="Visa"></a></li>
-              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/images/payment/discover.png" alt="discover" title="Discover"></a></li>
-              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/images/payment/paypal.png" alt="paypal" title="PayPal"></a></li>
-              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/images/payment/american.png" alt="american express" title="American Express"></a></li>
-              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/images/payment/mastercard.png" alt="discover" title="Discover"></a></li>
+              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="<?=ASSETS?>/images/payment/visa.png" alt="visa" title="Visa"></a></li>
+              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="<?=ASSETS?>/images/payment/discover.png" alt="discover" title="Discover"></a></li>
+              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="<?=ASSETS?>/images/payment/paypal.png" alt="paypal" title="PayPal"></a></li>
+              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="<?=ASSETS?>/images/payment/american.png" alt="american express" title="American Express"></a></li>
+              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="<?=ASSETS?>/images/payment/mastercard.png" alt="discover" title="Discover"></a></li>
             </ul>
           </div>
           <div class="col-md-4 mb-3 mb-md-0">
@@ -160,12 +160,12 @@
   </div><!-- Modal Dialog - Login/Signup end --> 
 
   <!-- Script --> 
-  <script src="assets/vendor/jquery/jquery.min.js"></script> 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script> 
-  <script src="assets/vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
-  <script src="assets/vendor/daterangepicker/moment.min.js"></script> 
-  <script src="assets/vendor/daterangepicker/daterangepicker.js"></script> 
+  <script src="<?=ASSETS?>/vendor/jquery/jquery.min.js"></script> 
+  <script src="<?=ASSETS?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+  <script src="<?=ASSETS?>/vendor/owl.carousel/owl.carousel.min.js"></script> 
+  <script src="<?=ASSETS?>/vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
+  <script src="<?=ASSETS?>/vendor/daterangepicker/moment.min.js"></script> 
+  <script src="<?=ASSETS?>/vendor/daterangepicker/daterangepicker.js"></script> 
   <script>
     $(function() {
      'use strict';
@@ -224,6 +224,6 @@
   });
 });
 </script> 
-<script src="assets/js/theme.js"></script>
+<script src="<?=ASSETS?>/js/theme.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php 
-include 'main/header.php';
+include __DIR__ . '/main/header.php';
 ?>
       <!-- Content
     ============================================= -->
@@ -853,5 +853,5 @@ include 'main/header.php';
     <!-- Content end --> 
     <script src="flightsearch.js"></script>
   <?php 
-    include 'main/footer.php';
+    include __DIR__. '/main/footer.php';
   ?>

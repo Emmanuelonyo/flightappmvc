@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '0f578b33e446b52de14fb6409f7721822bc65c28',
+        'reference' => '15751a6fd40e1c40dde59b1b802200b3b4d15994',
         'name' => 'technolix/flightmvs',
         'dev' => true,
     ),
@@ -65,12 +65,12 @@
             'dev_requirement' => false,
         ),
         'technolix/flightmvs' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '0f578b33e446b52de14fb6409f7721822bc65c28',
+            'reference' => '15751a6fd40e1c40dde59b1b802200b3b4d15994',
             'dev_requirement' => false,
         ),
         'vlucas/phpdotenv' => array(

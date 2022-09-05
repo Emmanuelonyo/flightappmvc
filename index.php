@@ -1,11 +1,6 @@
 <?php
 require __DIR__ . "/src/config.php";
-use App\{
-    Router,
-    Request,
-    Response,
-    Routes
-};
+use App\Router;
 
 $app = new Router();
 

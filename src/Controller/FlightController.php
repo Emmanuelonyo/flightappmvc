@@ -8,10 +8,9 @@ class FlightController extends Controller{
     public function flightOfferSearch($payload){
         try {
 
-            $init = $this->amadeus->getShopping()->getFlightOffers()->get($payload);           
-            $result = $this->flightOfferPrices($init);
-            
-            return json_encode($result);
+            $init = $this->amadeus->getShopping()->getFlightOffers()->get($payload);
+            $result = $init[0]->getResponse()->getBody();
+            return $result;
 
         } catch (ResponseException $th) {
             return $th->getMessage();
@@ -30,12 +29,8 @@ class FlightController extends Controller{
         }
     }
 
-    public function flightOfferPrices($flightOffers){
+    public function flightOfferPrices(){
         
-        $init = $this->amadeus->getShopping()->getFlightOffers()->getPricing()->postWithFlightOffers($flightOffers);
-        
-        $result = $init[0]->getResponse()->getBody();
-        return $result;
     }
 
    

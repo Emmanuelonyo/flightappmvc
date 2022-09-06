@@ -98,7 +98,7 @@ include __DIR__ . '/main/header.php';
                     <!-- Search Flight -->
                     <div class="tab-pane fade" id="flights" role="tabpanel" aria-labelledby="flights-tab">
                       <h2 class="text-4 mb-3">Book Domestic and International Flights</h2>
-                      <form id="bookingFlight" method="POST" autocomplete="off" action='flight-details.php'>
+                      <form id="bookingFlight" method="POST" autocomplete="off" action='flight-details'>
                         <div class="mb-3">
                           <div class="custom-control custom-radio custom-control-inline">
                             <input id="oneway" name="flight-trip" class="custom-control-input" value="one-way" checked="" required type="radio">
@@ -125,7 +125,9 @@ include __DIR__ . '/main/header.php';
                                 <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
                                 <div class="col-md-6 col-lg-2 form-group">
                                   <input id="flightReturn" name="flightReturn" type="text" class="form-control" required placeholder="Return Date">
-                                  <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
+                                  <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> 
+                                </div>
+                                
                                   <div class="col-md-6 col-lg-2 travellers-class form-group">
                                     <input type="text" id="flightTravellersClass" name="flightTravellersClass" class="travellers-class-input form-control" placeholder="Travellers, Class" readonly required onkeypress="return false;">
                                     <span class="icon-inside"><i class="fas fa-caret-down"></i></span> 

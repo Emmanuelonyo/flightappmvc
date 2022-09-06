@@ -7,7 +7,7 @@ use Amadeus\Exceptions\ResponseException;
 class FlightController extends Controller{
 
     public function __construct(){
-        $this->__setHeaders();
+        // $this->__setHeaders();
         $this->amadeus = Amadeus::builder($_ENV['AMADEUS_API_KEY'], $_ENV['AMADEUS_API_SECRET'])
         ->build();    
     }
@@ -43,7 +43,17 @@ class FlightController extends Controller{
             $init = $this->amadeus->getShopping()->getFlightOffers()->getPricing()->postWithFlightOffers($flightOffers);
 
             $result = $init->getResponse()->getBody();
-            return $result;
+            $result = json_decode($result,true);
+             print_r($result);
+            foreach($result as $key => $value){
+                // print_r($value);
+                $value['flightOffers']["validatingAirlineCodes"]['AirlineName'] = $this->getAirline(["airlineCodes"=>$value['flightOffers']['validatingAirlineCodes'][0]]);
+                $values[] = $value;
+                
+            }
+
+             
+            return json_encode($values);
 
         } catch (ResponseException $th) {
             throw $th;
@@ -62,5 +72,18 @@ class FlightController extends Controller{
         }
     }
 
+    public function getAirline($payload){
+        try {
+
+            $init = $this->amadeus->getReferenceData()->getAirlines()->get($payload);
+            $result = $init[0]->getResponse()->getBody();    
+            // print_r((json_decode($result))->data[0]->businessName)  ;   
+           return (json_decode($result))->data[0]->businessName;
+
+
+        } catch (ResponseException $th) {
+            print ($th->getMessage());
+        }
+    }
    
 }

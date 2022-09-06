@@ -35,8 +35,8 @@ flightfrom.addEventListener("input", () => {
 			// flightFromOption.innerHTML = `<option value="${k.name}">`
 
 			newOption = document.createElement("option");
-			newOption.value = k.id;  // assumes option string and value are the same
-			newOption.text = k.name;  // assumes option string and value are the same
+			newOption.value = k.name+` - ${k.iataCode}`;   // assumes option string and value are the same
+			// newOption.text = k.name;  // assumes option string and value are the same
 		
 			try { 
 				flightFromOption.add(newOption);  // this will fail in DOM browsers but is needed for IE
@@ -84,8 +84,8 @@ flightTo.addEventListener("input", () => {
 			// flightToOption.innerHTML = `<option value="${k.name}">`
 
 			newList = document.createElement("option");
-			newList.value = k.id;  // assumes option string and value are the same
-			newList.text = k.name;  // assumes option string and value are the same
+			newList.value = k.name+` - ${k.iataCode}`;  // assumes option string and value are the same
+			// newList.text = k.name;  // assumes option string and value are the same
 		
 			try { 
 				flightToOption.add(newList);  // this will fail in DOM browsers but is needed for IE
@@ -105,21 +105,21 @@ flightTo.addEventListener("input", () => {
 })
 
 //search flight details
-document.addEventListener('submit', async (e) =>{
-	e.preventDefault()
+// document.addEventListener('submit', async (e) =>{
+// 	e.preventDefault()
 	
-	const  formdata = serializeForm(e.target)
+// 	const  formdata = serializeForm(e.target)
 
-	console.log(formdata);
-	rootDOM.innerHTML = `${searchResultContent}`
+// 	console.log(formdata);
+// 	rootDOM.innerHTML = `${searchResultContent}`
 	
-})
+// })
 
-var serializeForm = function (form) {
-	var obj = {};
-	var formData = new FormData(form);
-	for (var key of formData.keys()) {
-		obj[key] = formData.get(key);
-	}
-	return obj;
-};
+// var serializeForm = function (form) {
+// 	var obj = {};
+// 	var formData = new FormData(form);
+// 	for (var key of formData.keys()) {
+// 		obj[key] = formData.get(key);
+// 	}
+// 	return obj;
+// };

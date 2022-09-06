@@ -24,3 +24,10 @@ $app->post("/api/v1/flight-booking", function($req){
     $req = file_get_contents("php://input"); 
      echo (new FlightController)->flightBooking($req);
 });
+
+//HOTEL BOOKING ENDPOINTS 
+
+$app->post("/api/v1/hotel", function($req){ 
+    $req = file_get_contents("php://input"); 
+     echo (new FlightController)->flightBooking($req);
+});

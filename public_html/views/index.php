@@ -17,18 +17,18 @@ include __DIR__ . '/main/header.php';
             <!-- Search Hotels -->
             <div class="tab-pane fade show active" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
               <h2 class="text-4 mb-3">Book Domestic and International Hotels</h2>
-              <form id="bookingHotels" method="post">
+              <form id="bookingHotels" method="POST" autocomplete="off" action='hotel-details.php'>
                 <div class="form-row">
                   <div class="col-md-12 col-lg form-group">
-                    <input type="text" class="form-control" id="hotelsFrom" required placeholder="Enter City/Hotel">
+                    <input type="text" class="form-control" name="hotelsFrom" id="hotelsFrom" required placeholder="Enter City/Hotel">
                     <span id="txtHint"></span>
                     <span class="icon-inside"><i class="fas 
                       fa-map-marker-alt"></i></span> </div>
                       <div class="col-md-6 col-lg form-group">
-                        <input id="hotelsCheckIn" type="text" class="form-control" required placeholder="Check In">
+                        <input id="hotelsCheckIn" name="hotelsCheckIn" type="text" class="form-control" required placeholder="Check In">
                         <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
                         <div class="col-md-6 col-lg form-group">
-                          <input id="hotelsCheckOut" type="text" class="form-control" required placeholder="Check Out">
+                          <input id="hotelsCheckOut" name="hotelsCheckOut" type="text" class="form-control" required placeholder="Check Out">
                           <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
                           <div class="col-md-6 col-lg travellers-class form-group">
                             <input type="text" id="hotelsTravellersClass" class="travellers-class-input form-control" name="hotels-travellers-class" placeholder="Rooms / People" required onkeypress="return false;">
